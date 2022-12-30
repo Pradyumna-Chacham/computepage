@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/chart.piecelabel.js/0.15.0/Chart.PieceLabel.min.js"></script>
+
+</head>
+<body>
+
+
+<!--Housing Expenses-->      
+
+
+<div><canvas id="Housing" style="width:100%;max-width:600px"> </canvas></div>
+<script>
+var r=document.getElementById("rental").value;
+var m=document.getElementById("House Maintenance").value;
+var i=document.getElementById("houseinsurance").value;
+var u=document.getElementById("utilities").value;
+var housing_exp=r + m + i + u;
+var Category1=['Rent','Maintenance','Insurance','Utilities'];
+var Amount1= [r,m,i,u];
+
+var barColors = [
+  "#b91d47",
+  "#00aba9",
+  "#2b5797",
+  "#e8c3b9",
+  "#1e7145"
+];
+
+new Chart("Housing", {
+  type: "pie",
+  data: {
+    labels: Category1,
+    datasets: [{
+      backgroundColor: barColors,
+      data: Amount1
+    }]
+  },
+  options: {
+    title: {
+      display: true,
+      text: "Housing Expenses Breakdown"
+    },
+	pieceLabel: { mode: 'percentage',precision:2}
+  }
+});
+</script>
+<!--Transportation Costs-->
+<div> <canvas id="Transport" style="width:100%;max-width:600px"></canvas></div>
+<script>
+var vehicle_loan=document.getElementById("vehicle loan").value;
+var fuel=document.getElementById("Fuel").value;
+var vehicle_insurance=document.getElementById("Car Insurance").value;
+varcar_maintenance=document.getElementById("Car Maintenance").value;
+var other_transport=document.getElementById("Other" ).value;
+var transport_exp=vehicle_loan + fuel + vehicle_insurance + car_maintenance + other_transport;
+var Category2=["Vehicle loan","Fuel","Car Insurance","Car maintenance","Other"];
+var Amount2=[vehicle_loan,fuel,vehicle_insurance,car_maintenance,other_transport];
+var barColors = [
+  "#b91d47",
+  "#00aba9",
+  "#2b5797",
+  "#e8c3b9",
+  "#1e7145"
+];
+
+new Chart("Transport", {
+  type: "pie",
+  data: {
+    labels: Category2,
+    datasets: [{
+      backgroundColor: barColors,
+      data: Amount2
+    }]
+  },
+  options: {
+    title: {
+      display: true,
+      text: "Transport Expenses Breakdown"
+    },
+	pieceLabel: { mode:'percentage',precision:2}
+  }
+});
+</script>
+
+<!--Food Expenses-->
+<div> <canvas id="Food" style="width:100%;max-width:600px"></canvas>    </div>
+<script>
+var food=document.getElementById("Food").value;
+var meals=document.getElementById("Meals").value;
+var food_exp=food + meals;
+
+var Category3=['Food','Meals'];
+var Amount3= [food,meals];
+
+var barColors = [
+  "#b91d47",
+  "#00aba9",
+  "#2b5797",
+  "#e8c3b9",
+  "#1e7145"
+];
+ 
+new Chart("Food", {
+  type: "pie",
+  data: {
+    labels: Category3,
+    datasets: [{
+      backgroundColor: barColors,
+      data: Amount3
+    }]
+  },
+  options: {
+    title: {
+      display: true,
+      text: "Food Expenses Breakdown"
+    },
+	pieceLabel: { mode: 'percentage',precision:2}
+  }
+});
+</script>
+
+<!--Healthcare Expenses-->
+<div><canvas id="Health" style="width:100%;max-width:600px"></canvas></div>
+<script>   
+var meds=document.getElementById("Medicines").value;
+var doc_fee=document.getElementById("Doctor Consultation/fee").value;
+var healthcare_exp= meds + doc_fee;
+
+var Category4=['Medicines','Doctor consultation/fees'];
+var Amount4= [meds,doc_fee];
+
+var barColors = [
+  "#b91d47",
+  "#00aba9",
+  "#2b5797",
+  "#e8c3b9",
+  "#1e7145"
+];
+
+new Chart("Health", {
+  type: "pie",
+  data: {
+    labels: Category4,
+    datasets: [{
+      backgroundColor: barColors,
+      data: Amount4
+    }]
+  },
+  options: {
+    title: {
+      display: true,
+      text: "Healthcare Expenses Breakdown"
+    },
+	pieceLabel: { mode: 'percentage',precision:2}
+  }
+});
+</script>
+<!--Investments-->
+  
+<div><canvas id="Savings" style="width:100%;max-width:600px"></canvas> </div>
+<script>
+
+
+
+var mf=document.getElementById("Mutual Funds").value;
+var fd=document.getElementById("Fixed Deposit").value;
+var pension=document.getElementById("Pension").value;
+var investments=document.getElementById("Investments").value;
+var investment_exp= mf + fd + pension + investments;
+
+
+var Category5=['Mutual Funds','Fixed Deposit','Pensions','Investments'],
+
+var Amount5= [mf,fd,pension,investments];
+
+var barColors = [
+  "#b91d47",
+  "#00aba9",
+  "#2b5797",
+  "#e8c3b9",
+  "#1e7145"
+];
+
+new Chart("Savings", {
+  type: "pie",
+  data: {
+    labels: Category5,
+    datasets: [{
+      backgroundColor: barColors,
+      data: Amount5
+    }]
+  },
+  options: {
+    title: {
+      display: true,
+      text: "Savings & Investments Breakdown"
+    },
+	pieceLabel: { mode: 'percentage',precision:2}
+  }
+});
+</script>
+
+<!--Loans-->
+
+<div><canvas id="Loans" style="width:100%;max-width:600px"></canvas> </div>
+<script>
+var cd=document.getElementById("Credit Card").value;
+var ed_loan=document.getElementById("Education Loan").value;
+var oth_loans=document.getElementById("Other Loans" ).value;
+var loan_exp= cd + ed_loan + oth_loans;
+
+var Category6=['Credit card',"Education Loan","Other loans"];
+
+var Amount6= [cd,ed_loan,oth_loans];
+
+var barColors = [
+  "#b91d47",
+  "#00aba9",
+  "#2b5797",
+  "#e8c3b9",
+  "#1e7145"
+];
+   
+
+new Chart("Loans", {
+  type: "pie",
+  data: {
+    labels: Category6,
+    datasets: [{
+      backgroundColor: barColors,
+      data: Amount6
+    }]
+  },
+  options: {
+    title: {
+      display: true,
+      text: "Loans & Other Payments"
+    },
+	pieceLabel: { mode: 'percentage',precision:2}
+  }
+});
+
+
+</script>
+<!--Living Expenses-->
+<div><canvas id="Life" style="width:100%;max-width:600px"></canvas>  </div>
+<script>
+
+var clothing=document.getElementById("Clothing").value;
+var household_exp=document.getElementById("Household Expenses").value;
+var living_exp= clothing + household_exp;
+
+var Category7=['Clothing','Household expenses'];
+
+var Amount7= [clothing,household_exp];
+
+var barColors = [
+  "#b91d47",
+  "#00aba9",
+  "#2b5797",
+  "#e8c3b9",
+  "#1e7145"
+];
+
+
+
+
+new Chart("Life", {
+  type: "pie",
+  data: {
+    labels: Category7,
+    datasets: [{
+      backgroundColor: barColors,
+      data: Amount7
+    }]
+  },
+  options: {
+    title: {
+      display: true,
+      text: "Living Expenses Breakdown"
+    },
+	pieceLabel: { mode: 'percentage',precision:2}
+  }
+});
+
+
+
+</script>
+<!--Miscellaneous Expenses-->
+<div> <canvas id="Misc" style="width:100%;max-width:600px"></canvas> </div>
+<script>
+
+
+var hobby=document.getElementById("Hobbies").value;
+var travel=document.getElementById("Travel").value;
+var recreation=document.getElementById("Recreation").value;
+var other_exp=document.getElementById("Other Expenses").value;
+var misc_exp=hobby + travel + recreation + other_exp;
+
+
+var Category8=['Hobbies','Travel','Recreation','Other Expenses'];
+
+var Amount8=  [hobby,travel,recreation,other_exp];
+
+var barColors = [
+  "#b91d47",
+  "#00aba9",
+  "#2b5797",
+  "#e8c3b9",
+  "#1e7145"
+];
+
+
+new Chart("Misc", {
+  type: "pie",
+  data: {
+    labels: Category8,
+    datasets: [{
+      backgroundColor: barColors,
+      data: Amount8
+    }]
+  },
+  options: {
+    title: {
+      display: true,
+      text: "Miscellaneous Expenses Breakdown"
+    },
+	pieceLabel: { mode: 'percentage',precision:2}
+  }
+});
+
+
+</script>
+
+
+
+
+
+<div><canvas id="Final" style="width:100%;max-width:600px"></canvas> </div>
+<script>
+var Category9=['Housing','Transportation','Loan','Living Expenses','Food Expenses','Healthcare','Miscellaneous','Savings'];
+
+var Amount9= [housing_exp,transportation_exp,loan_exp,living_exp,food_exp,healthcare_exp,misc_exp,investment_exp];
+
+var barColors = [
+  "#b91d47",
+  "#00aba9",
+  "#2b5797",
+  "#e8c3b9",
+  "#1e7145"
+];
+
+
+new Chart("Final", {
+  type: "pie",
+  data: {
+    labels: Category9,
+    datasets: [{
+      backgroundColor: barColors,
+      data: Amount9
+    }]
+  },
+  options: {
+    title: {
+      display: true,
+      text: "Total Expenses Breakdown"
+    },
+	pieceLabel: { mode: 'percentage',precision:2}
+  }
+});
+
+</script>
+  
+  <p>
+  <script>    
+      <div id="footer"><div id="footerin"><div id="footernav"><a href="https://main.d38jr8i0bzv3qw.amplifyapp.com/">About Us</a></div>
+	<div><button onClick="window.print()">Print</button></div></p>
+</script>
+      </body>
+</html>
+
+
+
+
+
