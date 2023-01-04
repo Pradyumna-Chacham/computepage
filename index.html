@@ -94,45 +94,45 @@ function findGetParameter(parameterName){
 </div>
 <script>
 
-var sal=findGetParameter("salary");
+var sal=findGetParameter(salary);
 document.write(sal+ "is the salary");
-var itr=findGetParameter("taxrate");
+var itr=findGetParameter(taxrate);
 var sal_bit=  sal;
 var Sal_aIT=sal(1-(itr*100));
-var r=findGetParameter("rental");
-var m=findGetParameter("House Maintenance");
-var i=findGetParameter("houseinsurance");
-var u=findGetParameter("utilities");
+var r=findGetParameter(rental);
+var m=findGetParameter(House Maintenance);
+var i=findGetParameter(houseinsurance);
+var u=findGetParameter(utilities);
 var housing_exp=r + m + i + u;
 var Category1=['Rent','Maintenance','Insurance','Utilities'];
 var Amount1= [r,m,i,u];
-var vehicle_loan=findGetParameter("vehicle loan");
-var fuel=findGetParameter("Fuel");
-var vehicle_insurance=findGetParameter("Car Insurance");
-var car_maintenance=findGetParameter("Car Maintenance");
-var other_transport=findGetParameter("Other" );
+var vehicle_loan=findGetParameter(vehicle loan);
+var fuel=findGetParameter(Fuel);
+var vehicle_insurance=findGetParameter(Car Insurance);
+var car_maintenance=findGetParameter(Car Maintenance);
+var other_transport=findGetParameter(Other);
 var transport_exp=vehicle_loan + fuel + vehicle_insurance + car_maintenance + other_transport;
 var Category2=["Vehicle loan","Fuel","Car Insurance","Car maintenance","Other"];
 var Amount2=[vehicle_loan,fuel,vehicle_insurance,car_maintenance,other_transport];
-var food=findGetParameter("Food");
-var meals=findGetParameter("Meals");
+var food=findGetParameter(Food);
+var meals=findGetParameter(Meals);
 var food_exp=food + meals;
 
 var Category3=['Food','Meals'];
 var Amount3= [food,meals];
 
-var meds=findGetParameter("Medicines");
-var doc_fee=findGetParameter("Doctor Fee");
+var meds=findGetParameter(Medicines);
+var doc_fee=findGetParameter(Doctor Fee);
 var healthcare_exp= meds + doc_fee;
 var Category4=['Medicines','Doctor consultation/fees'];
 var Amount4= [meds,doc_fee];
 
 
 
-var mf=findGetParameter("Mutual Funds");
-var fd=findGetParameter("Fixed Deposit");
-var pension=findGetParameter("Pension");
-var investments=findGetParameter("Investments");
+var mf=findGetParameter(Mutual Funds);
+var fd=findGetParameter(Fixed Deposit);
+var pension=findGetParameter(Pension);
+var investments=findGetParameter(Investments);
 var investment_exp= mf + fd + pension + investments;
 
 
@@ -140,17 +140,17 @@ var Category5=['Mutual Funds','Fixed Deposit','Pensions','Investments']
 
 var Amount5= [mf,fd,pension,investments];
 
-var cd=findGetParameter("Credit Card");
-var ed_loan=findGetParameter("Education Loan"); 
-var oth_loans=findGetParameter("Other Loans" );
+var cd=findGetParameter(Credit Card);
+var ed_loan=findGetParameter(Education Loan); 
+var oth_loans=findGetParameter(Other Loans);
 var loan_exp= cd + ed_loan + oth_loans;
 
 var Category6=['Credit card',"Education Loan","Other loans"];
 
 var Amount6= [cd,ed_loan,oth_loans];
 
-var clothing=findGetParameter("Clothing");
-var household_exp=findGetParameter("Household Expenses");
+var clothing=findGetParameter(Clothing);
+var household_exp=findGetParamter(Household Expenses);
 var living_exp= clothing + household_exp;
 
 var Category7=['Clothing','Household expenses'];
@@ -159,10 +159,10 @@ var Amount7= [clothing,household_exp];
 
 
 
-var hobby=findGetParameter("Hobbies");
-var travel=findGetParameter("Travel");
-var recreation=findGetParameter("Recreation");
-var other_exp=findGetParameter("Other Expenses");
+var hobby=findGetParameter(Hobbies);
+var travel=findGetParameter(Travel);
+var recreation=findGetParameter(Recreation);
+var other_exp=findGetParameter(Other Expenses);
 var misc_exp=hobby + travel + recreation + other_exp;
 
 
