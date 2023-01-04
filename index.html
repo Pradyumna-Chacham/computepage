@@ -76,7 +76,7 @@ var barColors = [    "#0074D9", "#FF4136", "#2ECC40", "#FF851B", "#7FDBFF", "#B1
 function findGetParameter(parameterName){
      var result = null,
          tmp p - [];
-     var items = location. search. substr (1).split("8");
+     var items = location.search.substr(1).split("&");
      for (var index = 0; index < items. length; index++)
          tmp pp==items[index]. split("=");
          if (tmp[0] === parameterName) result - decodeURIComponent(tmp[1]);
@@ -94,7 +94,7 @@ function findGetParameter(parameterName){
 </div>
 <script>
 
-var sal=findGetParameter(salary);
+var sal=findGetParameter("salary");
 document.write(sal+ "is the salary");
 var itr=findGetParameter(taxrate);
 var sal_bit=  sal;
